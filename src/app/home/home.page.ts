@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AccountService } from '../service/account.service';
-import { Account } from '../model/account.model';
+import { AccountService } from '../services/account.service';
+import { Account } from '../models/account.model';
 
 @Component({
   selector: 'app-home',

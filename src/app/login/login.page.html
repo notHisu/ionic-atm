@@ -12,8 +12,9 @@
     <ion-card-content>
       <form (ngSubmit)="onLogin()">
         <ion-item>
-          <ion-label position="floating">Email</ion-label>
           <ion-input
+            label="Tài khoản: "
+            placeholder="Nhập tài khoản"
             type="email"
             [(ngModel)]="email"
             name="email"
@@ -21,15 +22,19 @@
           ></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
           <ion-input
+            label="Mật khẩu: "
+            placeholder="Nhập mật khẩu"
             type="password"
             [(ngModel)]="password"
             name="password"
             required
           ></ion-input>
         </ion-item>
-        <ion-button expand="full" type="submit">Login</ion-button>
+        <ion-button expand="full" type="submit">Nhập</ion-button>
+        <ion-button expand="full" type="submit">Thêm</ion-button>
+        <ion-button expand="full" type="submit">Xoá</ion-button>
+        <ion-button expand="full" type="submit">Xem tất cả</ion-button>
       </form>
     </ion-card-content>
   </ion-card>
