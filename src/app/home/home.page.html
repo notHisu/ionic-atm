@@ -6,9 +6,10 @@
 
 <ion-content [fullscreen]="true">
   <div>
-    <p>-- Tài khoản: {{ account.id}} --</p>
+    <p>-- Tài khoản: {{ account?.username }} --</p>
     <ion-item (click)="viewAccountDetails()">
-      [Xem thông tin tài khoản] >
+      1. Xem thông tin tài khoản >
     </ion-item>
+    <ion-item (click)="logout()"> 2. Thoát > </ion-item>
   </div>
 </ion-content>

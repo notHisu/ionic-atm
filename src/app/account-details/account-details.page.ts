@@ -8,13 +8,13 @@ import { Account } from '../models/account.model';
   styleUrls: ['./account-details.page.scss'],
 })
 export class AccountDetailsPage implements OnInit {
-  account: Account;
+  account: Account | undefined;
 
-  constructor(private accountService: AccountService) {
-    this.account = this.accountService.getAccount();
-  }
+  constructor(private accountService: AccountService) {}
 
   ngOnInit() {
-    this.account = this.accountService.getAccount();
+    this.accountService.getCurrentAccount().then((account) => {
+      this.account = account;
+    });
   }
 }

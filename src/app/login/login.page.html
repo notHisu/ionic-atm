@@ -31,10 +31,16 @@
             required
           ></ion-input>
         </ion-item>
-        <ion-button expand="full" type="submit">Nhập</ion-button>
-        <ion-button expand="full" type="submit">Thêm</ion-button>
-        <ion-button expand="full" type="submit">Xoá</ion-button>
-        <ion-button expand="full" type="submit">Xem tất cả</ion-button>
+        <ion-button expand="full" type="submit">Đăng nhập</ion-button>
+        <ion-button expand="full" type="button" (click)="addAccount()"
+          >Thêm</ion-button
+        >
+        <ion-button expand="full" type="button" (click)="deleteAccount()"
+          >Xoá</ion-button
+        >
+        <ion-button expand="full" type="button" (click)="getAllAccounts()"
+          >Xem tất cả</ion-button
+        >
       </form>
     </ion-card-content>
   </ion-card>
