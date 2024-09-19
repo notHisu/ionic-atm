@@ -6,9 +6,9 @@
 
 <ion-content [fullscreen]="true">
   <div>
-    <p>-- Tài khoản: {{username}} --</p>
-    <ion-button routerLink="/account-details" expand="full"
-      >Xem thông tin tài khoản</ion-button
-    >
+    <p>-- Tài khoản: {{ account.id}} --</p>
+    <ion-item (click)="viewAccountDetails()">
+      [Xem thông tin tài khoản] >
+    </ion-item>
   </div>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { AccountService } from '../service/account.service';
+import { Account } from '../model/account.model';
 
 @Component({
   selector: 'app-account-details',
@@ -7,16 +8,13 @@ import { UserService } from '../user.service';
   styleUrls: ['./account-details.page.scss'],
 })
 export class AccountDetailsPage implements OnInit {
-  username: string;
-  money: number;
+  account: Account;
 
-  constructor(private userService: UserService) {
-    this.username = '';
-    this.money = 0;
+  constructor(private accountService: AccountService) {
+    this.account = this.accountService.getAccount();
   }
 
   ngOnInit() {
-    this.username = this.userService.getUsername();
-    this.money = this.userService.getMoney();
+    this.account = this.accountService.getAccount();
   }
 }

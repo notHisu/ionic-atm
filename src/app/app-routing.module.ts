@@ -18,6 +18,11 @@ const routes: Routes = [
       import('./login/login.module').then((m) => m.LoginPageModule),
   },
   {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginPageModule),
+  },
+  {
     path: 'account-details',
     loadChildren: () => import('./account-details/account-details.module').then( m => m.AccountDetailsPageModule)
   },

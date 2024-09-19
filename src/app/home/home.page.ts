@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import { AccountService } from '../service/account.service';
+import { Account } from '../model/account.model';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,12 @@ import { UserService } from '../user.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  username: string;
-
-  constructor(private userService: UserService) {
-    this.username = '';
+  account: Account;
+  constructor(private router: Router, private accountService: AccountService) {
+    this.account = accountService.getAccount();
   }
 
-  ngOnInit() {
-    this.username = this.userService.getUsername();
+  viewAccountDetails() {
+    this.router.navigate(['/account-details']);
   }
 }
